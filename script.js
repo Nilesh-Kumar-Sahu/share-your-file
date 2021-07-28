@@ -20,7 +20,7 @@ exports.DeleteData = async () => {
       }
     }
   }
-  console.log('Job done!');
+  // console.log('Removed Successfully!');
 };
 
 // https://trusting-haibt-6edb30.netlify.app/
