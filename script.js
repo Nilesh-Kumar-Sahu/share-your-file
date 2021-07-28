@@ -1,11 +1,11 @@
 const File = require('./models/fileModel');
 const fs = require('fs');
 
-// const connectDB = require('./config/db');
-// connectDB();
+const DB = require('./server');
+DB.connect();
 
 // Get all records older than 24 hours
-exports.DeleteData = async () => {
+const DeleteData = async () => {
   const pastDate = new Date(Date.now() - 24 * 60 * 60 * 1000);
   const files = await File.find({ createdAt: { $lt: pastDate } });
 
@@ -22,5 +22,10 @@ exports.DeleteData = async () => {
   }
   // console.log('Removed Successfully!');
 };
+
+DeleteData().then(() => {
+  console.log('Removed files successfully msg again!!');
+  process.exit();
+});
 
 // https://trusting-haibt-6edb30.netlify.app/

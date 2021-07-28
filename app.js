@@ -2,6 +2,7 @@ const express = require('express');
 const path = require('path');
 const app = express();
 const cors = require('cors');
+
 const corsOptions = {
   origin: process.env.ALLOWED_CLIENTS.split(','),
   // ['http://localhost:3000', 'http://localhost:5000', 'http://localhost:3300']

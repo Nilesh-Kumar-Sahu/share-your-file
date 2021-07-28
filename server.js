@@ -3,14 +3,13 @@ const dotenv = require('dotenv');
 
 dotenv.config({ path: './config.env' });
 const app = require('./app');
-const delScript = require('./script');
 
 const DB = process.env.DATABASE.replace(
   '<PASSWORD>',
   process.env.DATABASE_PASSWORD
 );
 
-mongoose
+exports.Connect = mongoose
   .connect(DB, {
     useNewUrlParser: true,
     useCreateIndex: true,
@@ -21,10 +20,6 @@ mongoose
     // console.log(con.connections);
     console.log('DB connection successful!!!');
   });
-
-// delScript.DeleteData().then(() => {
-//   process.exit();
-// });
 
 const port = process.env.PORT || 3000;
 
