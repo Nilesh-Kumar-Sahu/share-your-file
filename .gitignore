@@ -1,8 +1,7 @@
-
 uploads/*
 
 !uploads/.gitkeep
 
 node_modules
 
-config.env
+.env
