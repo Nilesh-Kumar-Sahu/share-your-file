@@ -22,12 +22,12 @@ mongoose
     console.log('DB connection successful!!!');
   });
 
-delScript.DeleteData().then(() => {
-  process.exit();
-});
+// delScript.DeleteData().then(() => {
+//   process.exit();
+// });
 
 const port = process.env.PORT || 3000;
 
-// app.listen(port, () => {
-//   console.log(`App running on port ${port}...`);
-// });
+app.listen(port, () => {
+  console.log(`App running on port ${port}...`);
+});
