@@ -4,4 +4,4 @@ uploads/*
 
 node_modules
 
-.env
+config.env
