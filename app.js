@@ -29,7 +29,7 @@ app.use(express.static('public'));
 // 2) ROUTER
 
 // Upload file and send mail Rout
-app.use('/api/files', require('./routes/files'));
+app.use('api/files', require('./routes/files'));
 
 // Show download link Rout
 app.use('/files', require('./routes/show'));
